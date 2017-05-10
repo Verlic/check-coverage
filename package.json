@@ -1,0 +1,28 @@
+{
+  "name": "check-coverage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "diff-coverage": "bin/diff-coverage.js"
+  },
+  "scripts": {
+    "test": "mocha --recursive",
+    "coverage": "nyc --all npm test",
+    "report": "nyc --all npm test && nyc report --reporter=lcovonly > ./coverage/lcov.info"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Verlic/check-coverage.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Verlic/check-coverage/issues"
+  },
+  "homepage": "https://github.com/Verlic/check-coverage#readme",
+  "dependencies": {
+    "yargs": "^8.0.1"
+  }
+}
